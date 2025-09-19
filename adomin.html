@@ -1,0 +1,15 @@
+<h2>管理者専用ページ</h2>
+
+<h3>会員追加フォーム</h3>
+<form method="post">
+    メールアドレス: <input name="add_email" type="email" required><br>
+    パスワード: <input name="add_password" type="password" required><br>
+    <input type="submit" value="会員追加">
+</form>
+
+<h3>登録済み会員一覧</h3>
+<ul>
+{% for email, info in users.items() %}
+    <li>{{ email }}</li>
+{% endfor %}
+</ul>
